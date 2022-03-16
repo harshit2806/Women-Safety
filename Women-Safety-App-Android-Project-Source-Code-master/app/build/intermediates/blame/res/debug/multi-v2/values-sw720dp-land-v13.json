@@ -12,6 +12,13 @@
                         "endColumns": "58",
                         "endOffsets": "254"
                     },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
                 }
             ]
         }
