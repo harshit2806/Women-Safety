@@ -47,6 +47,16 @@
                         "endColumns": "12,12",
                         "endOffsets": "472,665"
                     },
+                    "to": {
+                        "startLines": "12,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "882,1173",
+                        "endLines": "18,21",
+                        "endColumns": "12,12",
+                        "endOffsets": "1168,1328"
+                    }
+                }
+            ]
         }
     ]
 }
