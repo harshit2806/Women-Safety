@@ -1,6 +1,17 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\Users\\HP FOLIO\\Downloads\\Compressed\\android projects\\Attendance-management-system-master\\Women-Safety-App-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HP FOLIO\\Downloads\\Compressed\\android projects\\Attendance-management-system-master\\Women-Safety-App-master\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "89,147",
+                        "endColumns": "57,55",
+                        "endOffsets": "142,198"
+                    },
         }
     ]
 }
