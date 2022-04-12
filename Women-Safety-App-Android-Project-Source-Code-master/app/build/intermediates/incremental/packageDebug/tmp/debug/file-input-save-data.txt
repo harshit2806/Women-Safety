@@ -1,4 +1,5 @@
 #Internal package file, do not edit.
 #Wed Oct 06 15:33:28 PDT 2021
 0.baseType=DIRECTORY
+0.base=C\:\\Users\\HP FOLIO\\Downloads\\Compressed\\android projects\\Attendance-management-system-master\\Women-Safety-App-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 
