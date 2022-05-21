@@ -3,6 +3,7 @@
     package="com.prabhu.womensafetyapp"
     android:versionCode="1"
     android:versionName="1.0" >
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
@@ -29,5 +30,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.prabhu.womensafetyapp.Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName="com.prabhu.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.prabhu.womensafetyapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.prabhu.womensafetyapp.Display"
+            android:label="@string/title_activity_display"
+            android:parentActivityName="com.prabhu.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.prabhu.womensafetyapp.MainActivity" />
+        </activity>
+
+        <service android:name="com.prabhu.womensafetyapp.BgService" />
+
+        <activity
+            android:name="com.prabhu.womensafetyapp.Instructions"
+            android:label="@string/title_activity_instructions"
+            android:parentActivityName="com.prabhu.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.prabhu.womensafetyapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.prabhu.womensafetyapp.Verify"
+            android:label="@string/title_activity_verify"
+            android:parentActivityName="com.prabhu.womensafetyapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.prabhu.womensafetyapp.MainActivity" />
+        </activity>
+    </application>
 
 </manifest>
