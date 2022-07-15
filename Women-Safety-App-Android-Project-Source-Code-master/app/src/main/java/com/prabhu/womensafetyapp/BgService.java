@@ -182,5 +182,30 @@ public class BgService extends Service implements AccelerometerListener{
 	
 	
 	
+	// onDestroy method.   Display toast that service has stopped.
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
+		
+		// Toast Service Stopped.
+		Context context = getApplicationContext();
+		
+		   Log.i("Sensor", "Service  distroy");
+	         
+	        if (AccelerometerManager.isListening()) {
+	             
+	            AccelerometerManager.stopListening();
+	             
+	        }
+		
+		CharSequence text = "Women Safety App Service Stopped";
+		int duration = Toast.LENGTH_SHORT;
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+		
+		
+	}
+	
+	
 	
 }
