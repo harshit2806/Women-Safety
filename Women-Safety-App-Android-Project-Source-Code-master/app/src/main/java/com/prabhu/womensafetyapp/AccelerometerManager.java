@@ -48,6 +48,92 @@ public class AccelerometerManager {
     }
   
     /**
+     * Returns true if at least one Accelerometer sensor is available
+     */
+    public static boolean isSupported(Context context) {
+        aContext = context;
+        if (supported == null) {
+            if (aContext != null) {
+                 
+                 
+                sensorManager = (SensorManager) aContext.
+                        getSystemService(Context.SENSOR_SERVICE);
+                 
+                // Get all sensors in device
+                List<Sensor> sensors = sensorManager.getSensorList(
+                        Sensor.TYPE_ACCELEROMETER);
+                 
+                supported = new Boolean(sensors.size() > 0);
+                 
+                 
+                 
+            } else {
+                supported = Boolean.FALSE;
+            }
+        }
+        return supported;
+    }
+  
+    /**
+     * Configure the listener for shaking
+     * @param threshold
+     *             minimum acceleration variation for considering shaking
+     * @param interval
+     *             minimum interval between to shake events
+     */
+    public static void configure(int threshold, int interval) {
+        AccelerometerManager.threshold = threshold;
+        AccelerometerManager.interval = interval;
+    }
+  
+    /**
+     * Registers a listener and start listening
+     * @param accelerometerListener
+     *             callback for accelerometer events
+     */
+    public static void startListening( AccelerometerListener accelerometerListener )
+    {
+         
+        sensorManager = (SensorManager) aContext.
+                getSystemService(Context.SENSOR_SERVICE);
+         
+        // Take all sensors in device
+        List<Sensor> sensors = sensorManager.getSensorList(
+                Sensor.TYPE_ACCELEROMETER);
+         
+        if (sensors.size() > 0) {
+             
+            sensor = sensors.get(0);
+             
+            // Register Accelerometer Listener
+            running = sensorManager.registerListener(
+                    sensorEventListener, sensor,
+                    SensorManager.SENSOR_DELAY_GAME);
+             
+            listener = accelerometerListener;
+        }
+         
+         
+    }
+  
+    /**
+     * Configures threshold and interval
+     * And registers a listener and start listening
+     * @param accelerometerListener
+     *             callback for accelerometer events
+     * @param threshold
+     *             minimum acceleration variation for considering shaking
+     * @param interval
+     *             minimum interval between to shake events
+     */
+    public static void startListening(
+            AccelerometerListener accelerometerListener,
+            int threshold, int interval) {
+        configure(threshold, interval);
+        startListening(accelerometerListener);
+    }
+  
+    /**
      * The listener that listen to events from the accelerometer listener
      */
     private static SensorEventListener sensorEventListener =
