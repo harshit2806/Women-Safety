@@ -9,6 +9,15 @@
     tools:context=".Register" >
 
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:text="Name:" />
+
 
     <Button
         android:id="@+id/button1"
@@ -20,7 +29,16 @@
         android:onClick="storeInDB"
         android:text="Save" />
 
-
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignRight="@+id/button1"
+        android:ems="10"
+        android:hint="Mobile Number"
+        android:inputType="phone" />
 
     <EditText
         android:id="@+id/editText1"
