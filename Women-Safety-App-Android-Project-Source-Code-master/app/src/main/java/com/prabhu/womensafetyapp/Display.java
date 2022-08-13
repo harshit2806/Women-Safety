@@ -1,6 +1,5 @@
 package com.prabhu.womensafetyapp;
 
-
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.Context;
