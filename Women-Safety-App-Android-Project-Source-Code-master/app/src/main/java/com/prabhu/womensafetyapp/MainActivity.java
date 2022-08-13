@@ -1,7 +1,5 @@
 package com.prabhu.womensafetyapp;
 
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
